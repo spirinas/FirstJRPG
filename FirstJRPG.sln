@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstJRPG", "FirstJRPG\FirstJRPG.csproj", "{D0204555-0B51-42C0-A52D-514EA26D19ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{C6834DE9-48FD-31C1-8DF5-D96BED81EDC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0204555-0B51-42C0-A52D-514EA26D19ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0204555-0B51-42C0-A52D-514EA26D19ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0204555-0B51-42C0-A52D-514EA26D19ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0204555-0B51-42C0-A52D-514EA26D19ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6834DE9-48FD-31C1-8DF5-D96BED81EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6834DE9-48FD-31C1-8DF5-D96BED81EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6834DE9-48FD-31C1-8DF5-D96BED81EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6834DE9-48FD-31C1-8DF5-D96BED81EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {F383A427-D5E8-48FF-82AE-990AC4558AE2}
+	EndGlobalSection
+EndGlobal
