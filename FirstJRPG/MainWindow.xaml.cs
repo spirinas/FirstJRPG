@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Engine.ViewModels;
 
 namespace FirstJRPG
 {
@@ -16,9 +17,58 @@ namespace FirstJRPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        private GameSession _gameSession;
+
         public MainWindow()
         {
             InitializeComponent();
+            _gameSession = new GameSession();
+            DataContext = _gameSession;
+            Loaded += (s, e) => ShowInitialDialogs();
+        }
+
+        private void ShowInitialDialogs()
+        {
+            var nameDialog = new FirstJRPG.NicknameWindow { Owner = this };
+            if (nameDialog.ShowDialog() == true)
+            {
+                _gameSession.CurrentPlayer.Name = nameDialog.PlayerName;
+            }
+            else
+            {
+                Application.Current.Shutdown();
+                return;
+            }
+
+            var classDialog = new FirstJRPG.ClassWindow { Owner = this };
+            if (classDialog.ShowDialog() == true)
+            {
+                _gameSession.CurrentPlayer.Class = classDialog.SelectedClass;
+            }
+            else
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveNorth();
+        }
+
+        private void OnClick_MoveWest(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveWest();
+        }
+
+        private void OnClick_MoveEast(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveEast();
+        }
+
+        private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveSouth();
         }
     }
 }
